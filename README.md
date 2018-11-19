@@ -16,4 +16,6 @@ Having previously worked for compaines that had closed-source projects, and my f
 
 **004_generator_expression (Python)** - Python generator expression used to return Hello World from all letters.
 
+**005_for_xml (T-SQL)** - Letters of "Hello World!" stored in temp table one letter per row. Uses FOR XML to concatenate the rows.
+
 More coming soon
