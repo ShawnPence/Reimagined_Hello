@@ -7,6 +7,10 @@ namespace bogosort
 {
     class Program
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="args">optional args: args[1] = string to bogosort, args[2] = number of times to attempt</param>
         static void Main(string[] args)
         {
 
@@ -20,6 +24,19 @@ namespace bogosort
 
             int trials = 10;
 
+            //allow user to specify a different string to test
+            if (args.Length > 0) desiredString = args[0];
+            
+            //allow user to specify a number of trials
+            if (args.Length > 1)
+            {
+                int userRequestedTrials;
+                if (int.TryParse(args[1], out userRequestedTrials))
+                {
+                    if (userRequestedTrials > 0) trials = userRequestedTrials;
+                }
+            }
+                        
             List<long> results = new List<long>();  //used to store the number of random shuffles needed for each trial before target word was reached
 
             for(int t = trials; t > 0; t--)
