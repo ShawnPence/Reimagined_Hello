@@ -18,4 +18,8 @@ Having previously worked for compaines that had closed-source projects, and my f
 
 **005_for_xml (T-SQL)** - Letters of "Hello World!" stored in temp table one letter per row. Uses FOR XML to concatenate the rows.
 
-More coming soon
+**006_ChessboardQueens (C# / Windows Forms)** Animated visualization of backtracking algorithm used to fit the letters in "HelloWorld" to a 10x10 chessboard as if they were queens.  Shows each progression of letter placement as the algorithm finds a way to place the pieces.
+
+![Chessboard](HelloWorldChessboard.jpg)  
+
+*More coming soon*
