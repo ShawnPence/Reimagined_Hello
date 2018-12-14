@@ -57,7 +57,6 @@ namespace _006_ChessboardQueens
 
             for (int c = 0; c < 10; c++)
             {
-
                 Label newLabel = new Label();
                 newLabel.BackColor = System.Drawing.SystemColors.Control;
                 newLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -66,10 +65,8 @@ namespace _006_ChessboardQueens
                 newLabel.Name = "Unplaced_" + c.ToString().PadLeft(2, '0');
                 newLabel.AutoSize = false;
                 newLabel.Size = new System.Drawing.Size(50, 50);
-                newLabel.TabIndex = 3;
                 newLabel.Text = message[c];
                 newLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-                newLabel.AutoSize = false;
                 notPlaced[c] = newLabel;
                 this.Controls.Add(notPlaced[c]);
             }
@@ -81,20 +78,16 @@ namespace _006_ChessboardQueens
                 for (int c = 0; c < 10; c++)
                 {
                     Label newLabel = new Label();
-
                     newLabel.BackColor = gridColors[(r % 2) ^ (c % 2)];
-                    newLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                    newLabel.Font = new System.Drawing.Font("Consolas", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                     newLabel.Location = new System.Drawing.Point(50 + 50*c, 180+50*r);
                     newLabel.Name = "Board_" + r.ToString().PadLeft(2, '0') + "_" + c.ToString().PadLeft(2,'0');
                     newLabel.AutoSize = false;
                     newLabel.Size = new System.Drawing.Size(50, 50);
-                    newLabel.TabIndex = 3;
                     newLabel.Text = "";
                     newLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-
                     boardGrid[r][c] = newLabel;
                     this.Controls.Add(boardGrid[r][c]);
-
                 }
             }
 
