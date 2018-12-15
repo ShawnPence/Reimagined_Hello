@@ -7,7 +7,7 @@ def hello():
 
     letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "
   
-    return [ H+e+l+l+o+space+W+o+r+l+d 
+    return ( H+e+l+l+o+space+W+o+r+l+d 
                         for H in letters if H == 'H'
                         for e in letters if e == 'e'
                         for l in letters if l == 'l'
@@ -17,6 +17,7 @@ def hello():
                         for r in letters if r == 'r'
                         for d in letters if d == 'd'
     
-    ]
+    )
 
-print(hello())
+for hi in hello():
+    print(hi)
